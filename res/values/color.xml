@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="title_bg">#BDDFFF</color>
+    <color name="title_txt_bg">#330033</color>
+    <color name="weather_bg">#01BCF3</color>
+    <color name="white_txt_bg">#F5F5F5</color>
+    <color name="time_bg">#9999FF</color>
+    <color name="envrioment_bg">#CCCCCC</color>
+    <color name="keting_bg">#0A9246</color>
+    <color name="zhuwo_bg">#3366FF</color>
+    <color name="ciwo1_bg">#A85340</color>
+    <color name="ciwo2_bg">#CC33CC</color>
+    <color name="canting_bg">#FF6666</color>
+    <color name="chufang_bg">#339999</color>
+    <color name="weishengjian_bg">#FF9900</color>
+    <color name="rights_bg">#330099</color>
+    <color name="colck_bg">#FFFF99</color>
+    <color name="sc_transparent_background">#00111111</color>
+    <color name="guodao_bg">#0E6454</color>
+    
+</resources>

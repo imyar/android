@@ -1,0 +1,380 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/umeng_fb_contact_header"
+        android:layout_width="fill_parent"
+        android:layout_height="45dp"
+        android:layout_alignParentTop="true"
+        android:background="#A3C752" >
+
+        <ImageView
+            android:id="@+id/umeng_fb_back"
+            android:layout_width="50dp"
+            android:layout_height="25dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="5dp"
+            android:src="@drawable/umeng_fb_back_selector" />
+
+        <TextView
+            android:id="@+id/title_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="历史值"
+            android:textColor="#ffffff"
+            android:textSize="25sp" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <LinearLayout
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dip"
+            android:layout_weight="1"
+            android:background="@color/ciwo2_bg"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:id="@+id/r2h_dis1"
+                android:layout_width="match_parent"
+                android:layout_height="0dip"
+                android:layout_weight="4"
+                android:orientation="vertical" >
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal" >
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" >
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dip"
+                        android:layout_weight="1"
+                        android:orientation="vertical" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="开始日期:" />
+
+                        <TextView
+                            android:id="@+id/r2h_txt_startdate1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dip"
+                            android:text="2014-04-21" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dip"
+                        android:layout_weight="1"
+                        android:orientation="vertical" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="结束日期:" />
+
+                        <TextView
+                            android:id="@+id/r2h_txt_enddate1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dip"
+                            android:text="2014-05-01" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <com.view.WheelView.WheelView
+                    android:id="@+id/r2h_y1"
+                    android:layout_width="70dip"
+                    android:layout_height="wrap_content" />
+
+                <com.view.WheelView.WheelView
+                    android:id="@+id/r2h_m1"
+                    android:layout_width="70dip"
+                    android:layout_height="wrap_content" />
+
+                <com.view.WheelView.WheelView
+                    android:id="@+id/r2h_d1"
+                    android:layout_width="70dip"
+                    android:layout_height="wrap_content" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dip"
+                    android:orientation="vertical" >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical" >
+
+                        <Button
+                            android:id="@+id/r2h_wh_sure1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="确定开始时间" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical" >
+
+                        <Button
+                            android:id="@+id/r2h_wh_sure2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="确定结束时间" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dip"
+            android:layout_marginTop="10dip"
+            android:layout_weight="1"
+            android:background="@color/ciwo2_bg"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:id="@+id/r2h_dis2"
+                android:layout_width="match_parent"
+                android:layout_height="0dip"
+                android:layout_weight="4"
+                android:orientation="vertical" >
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal" >
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" >
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dip"
+                        android:layout_weight="1"
+                        android:orientation="vertical" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="开始日期:" />
+
+                        <TextView
+                            android:id="@+id/r2h_txt_startdate2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dip"
+                            android:text="2014-04-21" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dip"
+                        android:layout_weight="1"
+                        android:orientation="vertical" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="结束日期:" />
+
+                        <TextView
+                            android:id="@+id/r2h_txt_enddate2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dip"
+                            android:text="2014-05-01" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <com.view.WheelView.WheelView
+                    android:id="@+id/r2h_y2"
+                    android:layout_width="70dip"
+                    android:layout_height="wrap_content" />
+
+                <com.view.WheelView.WheelView
+                    android:id="@+id/r2h_m2"
+                    android:layout_width="70dip"
+                    android:layout_height="wrap_content" />
+
+                <com.view.WheelView.WheelView
+                    android:id="@+id/r2h_d2"
+                    android:layout_width="70dip"
+                    android:layout_height="wrap_content" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dip"
+                    android:orientation="vertical" >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical" >
+
+                        <Button
+                            android:id="@+id/r2h_wh_sure3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="确定开始时间" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical" >
+
+
+                        <Button
+                            android:id="@+id/r2h_wh_sure4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="确定结束时间" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dip"
+            android:layout_marginTop="10dip"
+            android:layout_weight="1"
+            android:background="@color/ciwo2_bg"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:id="@+id/r2h_dis3"
+                android:layout_width="match_parent"
+                android:layout_height="0dip"
+                android:layout_weight="4"
+                android:orientation="vertical" >
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal" >
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" >
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dip"
+                        android:layout_weight="1"
+                        android:orientation="vertical" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="开始日期:" />
+
+                        <TextView
+                            android:id="@+id/r2h_txt_startdate3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dip"
+                            android:text="2014-04-21" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dip"
+                        android:layout_weight="1"
+                        android:orientation="vertical" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="结束日期:" />
+
+                        <TextView
+                            android:id="@+id/r2h_txt_enddate3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dip"
+                            android:text="2014-05-01" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <com.view.WheelView.WheelView
+                    android:id="@+id/r2h_y3"
+                    android:layout_width="70dip"
+                    android:layout_height="wrap_content" />
+
+                <com.view.WheelView.WheelView
+                    android:id="@+id/r2h_m3"
+                    android:layout_width="70dip"
+                    android:layout_height="wrap_content" />
+
+                <com.view.WheelView.WheelView
+                    android:id="@+id/r2h_d3"
+                    android:layout_width="70dip"
+                    android:layout_height="wrap_content" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dip"
+                    android:orientation="vertical" >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical" >
+
+                        <Button
+                            android:id="@+id/r2h_wh_sure5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="确定开始时间" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical" >
+
+                        <Button
+                            android:id="@+id/r2h_wh_sure6"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="确定结束时间" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,2185 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity" >
+
+    <LinearLayout
+        android:layout_width="0dip"
+        android:layout_height="match_parent"
+        android:layout_weight="1.5"
+        android:orientation="vertical" >
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/title_bg" >
+
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center|top"
+                android:layout_margin="10dip"
+                android:text="国家863净化实验室监测平台"
+                android:textColor="@color/title_txt_bg"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:typeface="serif" />
+        </FrameLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="115dp"
+            android:layout_marginTop="10dip"
+            android:background="@color/weather_bg" >
+
+            <TextView
+                android:id="@+id/main_txt_city"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="16dp"
+                android:text="新乡"
+                android:textColor="@color/white_txt_bg"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:typeface="serif" />
+
+            <TextView
+                android:id="@+id/textView10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:text="中国气象网"
+                android:textColor="@color/white_txt_bg"
+                android:textStyle="bold"
+                android:typeface="serif" />
+
+            <TextView
+                android:id="@+id/main_txt_rain"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="29dp"
+                android:layout_toRightOf="@+id/main_txt_temp"
+                android:text="阵雨"
+                android:textColor="@color/white_txt_bg"
+                android:textSize="20sp" />
+
+            <ImageView
+                android:id="@+id/main_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/textView10"
+                android:src="@drawable/yahoo_weather_icos" />
+
+            <TextView
+                android:id="@+id/main_txt_temp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignTop="@+id/imageView1"
+                android:layout_marginLeft="17dp"
+                android:text="20℃"
+                android:textColor="@color/white_txt_bg"
+                android:textSize="44sp"
+                android:textStyle="bold"
+                android:typeface="serif" />
+
+            <TextView
+                android:id="@+id/main_txt_wind"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/main_txt_temp"
+                android:layout_alignParentBottom="true"
+                android:layout_toLeftOf="@+id/main_txt_wind"
+                android:text="北风 1级"
+                android:textColor="@color/white_txt_bg"
+                android:textSize="20sp"
+                android:typeface="serif" />
+
+            <TextView
+                android:id="@+id/main_txt_wet"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/main_txt_temp"
+                android:layout_alignBottom="@+id/main_txt_temp"
+                android:layout_toRightOf="@+id/main_txt_temp"
+                android:text="43%"
+                android:textColor="@color/white_txt_bg"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/main_txt_quality"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="64dp"
+                android:layout_toRightOf="@+id/main_txt_rain"
+                android:text="轻度污染"
+                android:textColor="@color/white_txt_bg"
+                android:textSize="20sp" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="180dip"
+            android:layout_marginTop="10dip" >
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/envrioment_bg"
+                    android:orientation="vertical" >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="bottom" >
+
+                        <TextView
+                            android:id="@+id/main_txt_level"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dip"
+                            android:text="二级（良）"
+                            android:textColor="@color/white_txt_bg"
+                            android:textSize="26sp"
+                            android:textStyle="bold"
+                            android:typeface="serif" />
+
+                        <TextView
+                            android:id="@+id/textView7"
+                            android:layout_width="0dip"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="right"
+                            android:text="数值单位：μg/m3(CO为mg/m³)"
+                            android:textColor="@color/white_txt_bg"
+                            android:textSize="20sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" >
+
+                        <LinearLayout
+                            android:layout_width="0dip"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1" >
+
+                            <TextView
+                                android:id="@+id/textView7"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="首要污染物"
+                                android:textColor="@color/white_txt_bg"
+                                android:textSize="20sp" />
+
+                            <TextView
+                                android:id="@+id/main_txt_prm"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="0"
+                                android:textColor="@color/white_txt_bg"
+                                android:textSize="20sp" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" >
+
+                        <TextView
+                            android:id="@+id/textView7"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="AQI"
+                            android:textColor="@color/white_txt_bg"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:id="@+id/main_txt_aqi"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="123"
+                            android:textColor="@color/white_txt_bg"
+                            android:textSize="20sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" >
+
+                        <LinearLayout
+                            android:layout_width="0dip"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1" >
+
+                            <TextView
+                                android:id="@+id/textView7"
+                                android:layout_width="0dip"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="PM2.5/1h"
+                                android:textColor="@color/white_txt_bg"
+                                android:textSize="20sp" />
+
+                            <TextView
+                                android:id="@+id/main_txt_pm25"
+                                android:layout_width="0dip"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="right"
+                                android:text="123"
+                                android:textColor="@color/white_txt_bg"
+                                android:textSize="20sp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dip"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="50dip"
+                            android:layout_weight="1" >
+
+                            <TextView
+                                android:id="@+id/textView7"
+                                android:layout_width="0dip"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="PM10/1h"
+                                android:textColor="@color/white_txt_bg"
+                                android:textSize="20sp" />
+
+                            <TextView
+                                android:id="@+id/main_txt_pm10"
+                                android:layout_width="0dip"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="right"
+                                android:text="123"
+                                android:textColor="@color/white_txt_bg"
+                                android:textSize="20sp" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" >
+
+                        <LinearLayout
+                            android:layout_width="0dip"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1" >
+
+                            <TextView
+                                android:id="@+id/textView7"
+                                android:layout_width="0dip"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="NO2/1h"
+                                android:textColor="@color/white_txt_bg"
+                                android:textSize="20sp" />
+
+                            <TextView
+                                android:id="@+id/main_txt_no2"
+                                android:layout_width="0dip"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="right"
+                                android:text="123"
+                                android:textColor="@color/white_txt_bg"
+                                android:textSize="20sp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dip"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="50dip"
+                            android:layout_weight="1" >
+
+                            <TextView
+                                android:id="@+id/textView7"
+                                android:layout_width="0dip"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="SO2/1h"
+                                android:textColor="@color/white_txt_bg"
+                                android:textSize="20sp" />
+
+                            <TextView
+                                android:id="@+id/main_txt_so2"
+                                android:layout_width="0dip"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="right"
+                                android:text="123"
+                                android:textColor="@color/white_txt_bg"
+                                android:textSize="20sp" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" >
+
+                        <LinearLayout
+                            android:layout_width="0dip"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1" >
+
+                            <TextView
+                                android:id="@+id/textView7"
+                                android:layout_width="0dip"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="O3/1h"
+                                android:textColor="@color/white_txt_bg"
+                                android:textSize="20sp" />
+
+                            <TextView
+                                android:id="@+id/main_txt_o31h"
+                                android:layout_width="0dip"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="right"
+                                android:text="123"
+                                android:textColor="@color/white_txt_bg"
+                                android:textSize="20sp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dip"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="50dip"
+                            android:layout_weight="1" >
+
+                            <TextView
+                                android:id="@+id/textView7"
+                                android:layout_width="0dip"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="O3/8h"
+                                android:textColor="@color/white_txt_bg"
+                                android:textSize="20sp" />
+
+                            <TextView
+                                android:id="@+id/main_txt_o38h"
+                                android:layout_width="0dip"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="right"
+                                android:text="123"
+                                android:textColor="@color/white_txt_bg"
+                                android:textSize="20sp" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" >
+
+                        <LinearLayout
+                            android:layout_width="0dip"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1" >
+
+                            <TextView
+                                android:id="@+id/textView7"
+                                android:layout_width="0dip"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="CO/1h"
+                                android:textColor="@color/white_txt_bg"
+                                android:textSize="20sp" />
+
+                            <TextView
+                                android:id="@+id/main_txt_co"
+                                android:layout_width="0dip"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="right"
+                                android:text="123"
+                                android:textColor="@color/white_txt_bg"
+                                android:textSize="20sp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dip"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="50dip"
+                            android:layout_weight="1" >
+
+                            <TextView
+                                android:id="@+id/textView7"
+                                android:layout_width="0dip"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="right"
+                                android:text="中国环保局"
+                                android:textColor="@color/white_txt_bg"
+                                android:textSize="20sp"
+                                android:textStyle="bold"
+                                android:typeface="serif" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </ScrollView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="140dip"
+            android:layout_marginTop="10dip" >
+
+            <LinearLayout
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/time_bg"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/main_txt_week"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:padding="12dip"
+                    android:text="星期二"
+                    android:textColor="@color/white_txt_bg"
+                    android:textSize="36sp" />
+
+                <TextView
+                    android:id="@+id/main_txt_year"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:text="2014年12月24日"
+                    android:textColor="@color/white_txt_bg"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/mian_txt_lunar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:text="閏九月廿八"
+                    android:textColor="@color/white_txt_bg"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/mian_txt_animalyear"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:text="甲午（馬）年"
+                    android:textColor="@color/white_txt_bg"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dip"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:background="@color/colck_bg"
+                android:gravity="center" >
+
+                <AnalogClock
+                    android:id="@+id/analogClock1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dip" />
+
+                <DigitalClock
+                    android:id="@+id/digitalClock1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="DigitalClock"
+                    android:textSize="24sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dip"
+            android:background="@color/keting_bg" >
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="19dp"
+                android:layout_marginTop="36dp"
+                android:src="@drawable/room" />
+
+            <TextView
+                android:id="@+id/textView8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignRight="@+id/imageView2"
+                android:layout_below="@+id/imageView2"
+                android:layout_marginRight="61dp"
+                android:text="客厅"
+                android:textColor="@color/white_txt_bg"
+                android:textSize="34sp"
+                android:textStyle="bold"
+                android:typeface="serif" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="64dp"
+                android:layout_toRightOf="@+id/imageView2"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" >
+
+                    <ImageView
+                        android:id="@+id/img_r8_o3"
+                        android:layout_width="20dip"
+                        android:layout_height="20dip"
+                        android:src="@drawable/connect_red" />
+
+                    <TextView
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="臭氧"
+                        android:textColor="@color/white_txt_bg"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:typeface="serif" />
+
+                    <TextView
+                        android:id="@+id/main_r8_txt_o3"
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="0.0ppm" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="7dip" >
+
+                    <ImageView
+                        android:id="@+id/img_r8_ben"
+                        android:layout_width="20dip"
+                        android:layout_height="20dip"
+                        android:src="@drawable/connect_red" />
+
+                    <TextView
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="苯"
+                        android:textColor="@color/white_txt_bg"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:typeface="serif" />
+
+                    <TextView
+                        android:id="@+id/main_r8_txt_ben"
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="0.0ppm" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="7dip" >
+
+                    <ImageView
+                        android:id="@+id/img_r8_yacha"
+                        android:layout_width="20dip"
+                        android:layout_height="20dip"
+                        android:src="@drawable/connect_red" />
+
+                    <TextView
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="压差"
+                        android:textColor="@color/white_txt_bg"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:typeface="serif" />
+
+                    <TextView
+                        android:id="@+id/main_r8_txt_yacha"
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="0.0ppm" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="7dip" >
+
+                    <ImageView
+                        android:id="@+id/img_r8_anqi"
+                        android:layout_width="20dip"
+                        android:layout_height="20dip"
+                        android:src="@drawable/connect_red" />
+
+                    <TextView
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="氮气"
+                        android:textColor="@color/white_txt_bg"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:typeface="serif" />
+
+                    <TextView
+                        android:id="@+id/main_r8_txt_anqi"
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="0.0ppm" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="7dip" >
+
+                    <ImageView
+                        android:id="@+id/img_r8_wet"
+                        android:layout_width="20dip"
+                        android:layout_height="20dip"
+                        android:src="@drawable/connect_red" />
+
+                    <TextView
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="温湿度"
+                        android:textColor="@color/white_txt_bg"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:typeface="serif" />
+
+                    <TextView
+                        android:id="@+id/main_r8_txt_wet"
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="0.0ppm" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="7dip" >
+
+                    <ImageView
+                        android:id="@+id/img_r8_jiaquan"
+                        android:layout_width="20dip"
+                        android:layout_height="20dip"
+                        android:src="@drawable/connect_red" />
+
+                    <TextView
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="甲醛"
+                        android:textColor="@color/white_txt_bg"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:typeface="serif" />
+
+                    <TextView
+                        android:id="@+id/main_r8_txt_jiaquan"
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="0.0ppm" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="7dip" >
+
+                    <ImageView
+                        android:id="@+id/img_r8_voc"
+                        android:layout_width="20dip"
+                        android:layout_height="20dip"
+                        android:src="@drawable/connect_red" />
+
+                    <TextView
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="VOC"
+                        android:textColor="@color/white_txt_bg"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:typeface="serif" />
+
+                    <TextView
+                        android:id="@+id/main_r8_txt_voc"
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="0.0ppm" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="7dip" >
+
+                    <ImageView
+                        android:id="@+id/img_r8_co2"
+                        android:layout_width="20dip"
+                        android:layout_height="20dip"
+                        android:src="@drawable/connect_red" />
+
+                    <TextView
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="二氧化碳"
+                        android:textColor="@color/white_txt_bg"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:typeface="serif" />
+
+                    <TextView
+                        android:id="@+id/main_r8_txt_co2"
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="0.0ppm" />
+                </LinearLayout>
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dip"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="10dip"
+        android:layout_weight="2.3"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <RelativeLayout
+                android:id="@+id/rlayout1"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/zhuwo_bg" >
+
+                <ImageView
+                    android:id="@+id/imageView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginLeft="19dp"
+                    android:layout_marginTop="36dp"
+                    android:src="@drawable/room" />
+
+                <TextView
+                    android:id="@+id/textView8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignRight="@+id/imageView2"
+                    android:layout_below="@+id/imageView2"
+                    android:layout_marginRight="61dp"
+                    android:text="主卧"
+                    android:textColor="@color/white_txt_bg"
+                    android:textSize="34sp"
+                    android:textStyle="bold"
+                    android:typeface="serif" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginLeft="30dp"
+                    android:layout_toRightOf="@+id/imageView2"
+                    android:orientation="vertical" >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" >
+
+                        <ImageView
+                            android:id="@+id/img_r1_wendu"
+                            android:layout_width="20dip"
+                            android:layout_height="20dip"
+                            android:src="@drawable/connect_red" />
+
+                        <TextView
+                            android:layout_width="0dip"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="温度"
+                            android:textColor="@color/white_txt_bg"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            android:typeface="serif" />
+
+                        <TextView
+                            android:id="@+id/main_r1_txt_wendu"
+                            android:layout_width="0dip"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="0.0℃" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dip" >
+
+                        <ImageView
+                            android:id="@+id/img_r1_wet"
+                            android:layout_width="20dip"
+                            android:layout_height="20dip"
+                            android:src="@drawable/connect_red" />
+
+                        <TextView
+                            android:layout_width="0dip"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="湿度"
+                            android:textColor="@color/white_txt_bg"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            android:typeface="serif" />
+
+                        <TextView
+                            android:id="@+id/main_r1_txt_wet"
+                            android:layout_width="0dip"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="0.0%" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dip" >
+
+                        <ImageView
+                            android:id="@+id/img_r1_c2h"
+                            android:layout_width="20dip"
+                            android:layout_height="20dip"
+                            android:src="@drawable/connect_red" />
+
+                        <TextView
+                            android:layout_width="0dip"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="甲醛"
+                            android:textColor="@color/white_txt_bg"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            android:typeface="serif" />
+
+                        <TextView
+                            android:id="@+id/main_r1_txt_jiaquan"
+                            android:layout_width="0dip"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="0.0ppm" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dip" >
+
+                        <ImageView
+                            android:id="@+id/img_r1_co2"
+                            android:layout_width="20dip"
+                            android:layout_height="20dip"
+                            android:src="@drawable/connect_red" />
+
+                        <TextView
+                            android:layout_width="0dip"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="二氧化碳"
+                            android:textColor="@color/white_txt_bg"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            android:typeface="serif" />
+
+                        <TextView
+                            android:id="@+id/main_r1_txt_co2"
+                            android:layout_width="0dip"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="0.0ppm" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dip" >
+
+                        <ImageView
+                            android:id="@+id/img_r1_yacha"
+                            android:layout_width="20dip"
+                            android:layout_height="20dip"
+                            android:src="@drawable/connect_red" />
+
+                        <TextView
+                            android:layout_width="0dip"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="压差"
+                            android:textColor="@color/white_txt_bg"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            android:typeface="serif" />
+
+                        <TextView
+                            android:id="@+id/main_r1_txt_yacha"
+                            android:layout_width="0dip"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="0.0ppm" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dip" >
+
+                        <ImageView
+                            android:id="@+id/img_r1_anqi"
+                            android:layout_width="20dip"
+                            android:layout_height="20dip"
+                            android:src="@drawable/connect_red" />
+
+                        <TextView
+                            android:layout_width="0dip"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="氨气"
+                            android:textColor="@color/white_txt_bg"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            android:typeface="serif" />
+
+                        <TextView
+                            android:id="@+id/main_r1_txt_anqi"
+                            android:layout_width="0dip"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="0.0ppm" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dip" >
+
+                        <ImageView
+                            android:id="@+id/img_r1_o3"
+                            android:layout_width="20dip"
+                            android:layout_height="20dip"
+                            android:src="@drawable/connect_red" />
+
+                        <TextView
+                            android:layout_width="0dip"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="臭氧"
+                            android:textColor="@color/white_txt_bg"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            android:typeface="serif" />
+
+                        <TextView
+                            android:id="@+id/main_r1_txt_o3"
+                            android:layout_width="0dip"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="0.0ppm" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dip" >
+
+                        <ImageView
+                            android:id="@+id/img_r1_voc"
+                            android:layout_width="20dip"
+                            android:layout_height="20dip"
+                            android:src="@drawable/connect_red" />
+
+                        <TextView
+                            android:layout_width="0dip"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="VOC"
+                            android:textColor="@color/white_txt_bg"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            android:typeface="serif" />
+
+                        <TextView
+                            android:id="@+id/main_r1_txt_voc"
+                            android:layout_width="0dip"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="0.0ppm" />
+                    </LinearLayout>
+                </LinearLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/main_r_room2"
+                android:layout_width="0dip"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dip"
+                android:layout_weight="1"
+                android:background="@color/ciwo1_bg" >
+
+                <ImageView
+                    android:id="@+id/imageView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginLeft="19dp"
+                    android:layout_marginTop="36dp"
+                    android:src="@drawable/room" />
+
+                <TextView
+                    android:id="@+id/textView8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignRight="@+id/imageView2"
+                    android:layout_below="@+id/imageView2"
+                    android:layout_marginRight="61dp"
+                    android:text="次卧一"
+                    android:textColor="@color/white_txt_bg"
+                    android:textSize="34sp"
+                    android:textStyle="bold"
+                    android:typeface="serif" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginLeft="30dp"
+                    android:layout_toRightOf="@+id/imageView2"
+                    android:orientation="vertical" >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" >
+
+                        <ImageView
+                            android:id="@+id/img_r2_o3"
+                            android:layout_width="20dip"
+                            android:layout_height="20dip"
+                            android:src="@drawable/connect_red" />
+
+                        <TextView
+                            android:layout_width="0dip"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="臭氧"
+                            android:textColor="@color/white_txt_bg"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            android:typeface="serif" />
+
+                        <TextView
+                            android:id="@+id/main_r2_txt_o3"
+                            android:layout_width="0dip"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="0.0ppm" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="7dip" >
+
+                        <ImageView
+                            android:id="@+id/img_r2_yacha"
+                            android:layout_width="20dip"
+                            android:layout_height="20dip"
+                            android:src="@drawable/connect_red" />
+
+                        <TextView
+                            android:layout_width="0dip"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="压差"
+                            android:textColor="@color/white_txt_bg"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            android:typeface="serif" />
+
+                        <TextView
+                            android:id="@+id/main_r2_txt_yacha"
+                            android:layout_width="0dip"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="0.0ppm" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="7dip" >
+
+                        <ImageView
+                            android:id="@+id/img_r2_anqi"
+                            android:layout_width="20dip"
+                            android:layout_height="20dip"
+                            android:src="@drawable/connect_red" />
+
+                        <TextView
+                            android:layout_width="0dip"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="氮气"
+                            android:textColor="@color/white_txt_bg"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            android:typeface="serif" />
+
+                        <TextView
+                            android:id="@+id/main_r2_txt_anqi"
+                            android:layout_width="0dip"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="0.0ppm" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="7dip" >
+
+                        <ImageView
+                            android:id="@+id/img_r2_wendu"
+                            android:layout_width="20dip"
+                            android:layout_height="20dip"
+                            android:src="@drawable/connect_red" />
+
+                        <TextView
+                            android:layout_width="0dip"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="温度"
+                            android:textColor="@color/white_txt_bg"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            android:typeface="serif" />
+
+                        <TextView
+                            android:id="@+id/main_r2_txt_wendu"
+                            android:layout_width="0dip"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="0.0℃" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="7dip" >
+
+                        <ImageView
+                            android:id="@+id/img_r2_wet"
+                            android:layout_width="20dip"
+                            android:layout_height="20dip"
+                            android:src="@drawable/connect_red" />
+
+                        <TextView
+                            android:layout_width="0dip"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="湿度"
+                            android:textColor="@color/white_txt_bg"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            android:typeface="serif" />
+
+                        <TextView
+                            android:id="@+id/main_r2_txt_wet"
+                            android:layout_width="0dip"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="0.0%" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="7dip" >
+
+                        <ImageView
+                            android:id="@+id/img_r2_c2h"
+                            android:layout_width="20dip"
+                            android:layout_height="20dip"
+                            android:src="@drawable/connect_red" />
+
+                        <TextView
+                            android:layout_width="0dip"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="甲醛"
+                            android:textColor="@color/white_txt_bg"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            android:typeface="serif" />
+
+                        <TextView
+                            android:id="@+id/main_r2_txt_jiaquan"
+                            android:layout_width="0dip"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="0.0ppm" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="7dip" >
+
+                        <ImageView
+                            android:id="@+id/img_r2_voc"
+                            android:layout_width="20dip"
+                            android:layout_height="20dip"
+                            android:src="@drawable/connect_red" />
+
+                        <TextView
+                            android:layout_width="0dip"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="VOC"
+                            android:textColor="@color/white_txt_bg"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            android:typeface="serif" />
+
+                        <TextView
+                            android:id="@+id/main_r2_txt_voc"
+                            android:layout_width="0dip"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="0.0ppm" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="7dip" >
+
+                        <ImageView
+                            android:id="@+id/img_r2_co2"
+                            android:layout_width="20dip"
+                            android:layout_height="20dip"
+                            android:src="@drawable/connect_red" />
+
+                        <TextView
+                            android:layout_width="0dip"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="二氧化碳"
+                            android:textColor="@color/white_txt_bg"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            android:typeface="serif" />
+
+                        <TextView
+                            android:id="@+id/main_r2_txt_co2"
+                            android:layout_width="0dip"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="0.0ppm" />
+                    </LinearLayout>
+                </LinearLayout>
+            </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dip" >
+
+            <RelativeLayout
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/ciwo2_bg" >
+
+                <ImageView
+                    android:id="@+id/imageView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginLeft="19dp"
+                    android:layout_marginTop="36dp"
+                    android:src="@drawable/room" />
+
+                <TextView
+                    android:id="@+id/textView8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignRight="@+id/imageView2"
+                    android:layout_below="@+id/imageView2"
+                    android:layout_marginRight="61dp"
+                    android:text="次卧二"
+                    android:textColor="@color/white_txt_bg"
+                    android:textSize="34sp"
+                    android:textStyle="bold"
+                    android:typeface="serif" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginLeft="30dp"
+                    android:layout_toRightOf="@+id/imageView2"
+                    android:orientation="vertical" >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" >
+
+                        <ImageView
+                            android:id="@+id/img_r3_wendu"
+                            android:layout_width="20dip"
+                            android:layout_height="20dip"
+                            android:src="@drawable/connect_red" />
+
+                        <TextView
+                            android:layout_width="0dip"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="温度"
+                            android:textColor="@color/white_txt_bg"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            android:typeface="serif" />
+
+                        <TextView
+                            android:id="@+id/main_r3_txt_wendu"
+                            android:layout_width="0dip"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="0.0℃" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dip" >
+
+                        <ImageView
+                            android:id="@+id/img_r3_wet"
+                            android:layout_width="20dip"
+                            android:layout_height="20dip"
+                            android:src="@drawable/connect_red" />
+
+                        <TextView
+                            android:layout_width="0dip"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="湿度"
+                            android:textColor="@color/white_txt_bg"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            android:typeface="serif" />
+
+                        <TextView
+                            android:id="@+id/main_r3_txt_wet"
+                            android:layout_width="0dip"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="0.0%" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dip" >
+
+                        <ImageView
+                            android:id="@+id/img_r3_c2h"
+                            android:layout_width="20dip"
+                            android:layout_height="20dip"
+                            android:src="@drawable/connect_red" />
+
+                        <TextView
+                            android:layout_width="0dip"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="甲醛"
+                            android:textColor="@color/white_txt_bg"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            android:typeface="serif" />
+
+                        <TextView
+                            android:id="@+id/main_r3_txt_jiaquan"
+                            android:layout_width="0dip"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="0.0ppm" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dip" >
+
+                        <ImageView
+                            android:id="@+id/img_r3_co2"
+                            android:layout_width="20dip"
+                            android:layout_height="20dip"
+                            android:src="@drawable/connect_red" />
+
+                        <TextView
+                            android:layout_width="0dip"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="二氧化碳"
+                            android:textColor="@color/white_txt_bg"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            android:typeface="serif" />
+
+                        <TextView
+                            android:id="@+id/main_r3_txt_co2"
+                            android:layout_width="0dip"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="0.0ppm" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dip" >
+
+                        <ImageView
+                            android:id="@+id/img_r3_yacha"
+                            android:layout_width="20dip"
+                            android:layout_height="20dip"
+                            android:src="@drawable/connect_red" />
+
+                        <TextView
+                            android:layout_width="0dip"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="压差"
+                            android:textColor="@color/white_txt_bg"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            android:typeface="serif" />
+
+                        <TextView
+                            android:id="@+id/main_r3_txt_yacha"
+                            android:layout_width="0dip"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="0.0ppm" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dip" >
+
+                        <ImageView
+                            android:id="@+id/img_r3_anqi"
+                            android:layout_width="20dip"
+                            android:layout_height="20dip"
+                            android:src="@drawable/connect_red" />
+
+                        <TextView
+                            android:layout_width="0dip"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="氨气"
+                            android:textColor="@color/white_txt_bg"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            android:typeface="serif" />
+
+                        <TextView
+                            android:id="@+id/main_r3_txt_anqi"
+                            android:layout_width="0dip"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="0.0ppm" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dip" >
+
+                        <ImageView
+                            android:id="@+id/img_r3_o3"
+                            android:layout_width="20dip"
+                            android:layout_height="20dip"
+                            android:src="@drawable/connect_red" />
+
+                        <TextView
+                            android:layout_width="0dip"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="臭氧"
+                            android:textColor="@color/white_txt_bg"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            android:typeface="serif" />
+
+                        <TextView
+                            android:id="@+id/main_r3_txt_o3"
+                            android:layout_width="0dip"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="0.0ppm" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dip" >
+
+                        <ImageView
+                            android:id="@+id/img_r3_voc"
+                            android:layout_width="20dip"
+                            android:layout_height="20dip"
+                            android:src="@drawable/connect_red" />
+
+                        <TextView
+                            android:layout_width="0dip"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="VOC"
+                            android:textColor="@color/white_txt_bg"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            android:typeface="serif" />
+
+                        <TextView
+                            android:id="@+id/main_r3_txt_voc"
+                            android:layout_width="0dip"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="0.0ppm" />
+                    </LinearLayout>
+                </LinearLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0dip"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dip"
+                android:layout_weight="1"
+                android:background="@color/weishengjian_bg" >
+
+                <ImageView
+                    android:id="@+id/imageView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginLeft="19dp"
+                    android:layout_marginTop="36dp"
+                    android:src="@drawable/room" />
+
+                <TextView
+                    android:id="@+id/textView8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignRight="@+id/imageView2"
+                    android:layout_below="@+id/imageView2"
+                    android:layout_marginRight="16dp"
+                    android:text="卫生间"
+                    android:textColor="@color/white_txt_bg"
+                    android:textSize="34sp"
+                    android:textStyle="bold"
+                    android:typeface="serif" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginLeft="30dp"
+                    android:layout_toRightOf="@+id/imageView2"
+                    android:orientation="vertical" >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" >
+
+                        <ImageView
+                            android:id="@+id/img_r4_anqi"
+                            android:layout_width="20dip"
+                            android:layout_height="20dip"
+                            android:src="@drawable/connect_red" />
+
+                        <TextView
+                            android:layout_width="0dip"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="氨气"
+                            android:textColor="@color/white_txt_bg"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            android:typeface="serif" />
+
+                        <TextView
+                            android:id="@+id/main_r4_txt_anqi"
+                            android:layout_width="0dip"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="0.0ppm" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dip" >
+
+                        <ImageView
+                            android:id="@+id/img_r4_ben"
+                            android:layout_width="20dip"
+                            android:layout_height="20dip"
+                            android:src="@drawable/connect_red" />
+
+                        <TextView
+                            android:layout_width="0dip"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="苯"
+                            android:textColor="@color/white_txt_bg"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            android:typeface="serif" />
+
+                        <TextView
+                            android:id="@+id/main_r4_txt_ben"
+                            android:layout_width="0dip"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="0.0ppm" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dip" >
+
+                        <ImageView
+                            android:id="@+id/img_r4_co2"
+                            android:layout_width="20dip"
+                            android:layout_height="20dip"
+                            android:src="@drawable/connect_red" />
+
+                        <TextView
+                            android:layout_width="0dip"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="二氧化碳"
+                            android:textColor="@color/white_txt_bg"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            android:typeface="serif" />
+
+                        <TextView
+                            android:id="@+id/main_r4_txt_co2"
+                            android:layout_width="0dip"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="0.0ppm" />
+                    </LinearLayout>
+                </LinearLayout>
+            </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dip" >
+
+            <RelativeLayout
+                android:layout_width="0dip"
+                android:layout_height="match_parent"
+                android:layout_weight="1.04"
+                android:background="@color/canting_bg" >
+
+                <TextView
+                    android:id="@+id/textView8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/imageView2"
+                    android:text="餐厅"
+                    android:textColor="@color/white_txt_bg"
+                    android:textSize="34sp"
+                    android:textStyle="bold"
+                    android:typeface="serif" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_toRightOf="@+id/imageView2"
+                    android:orientation="vertical" >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" >
+
+                        <ImageView
+                            android:id="@+id/img_r5_wendu"
+                            android:layout_width="20dip"
+                            android:layout_height="20dip"
+                            android:src="@drawable/connect_red" />
+
+                        <TextView
+                            android:layout_width="0dip"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="温度"
+                            android:textColor="@color/white_txt_bg"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            android:typeface="serif" />
+
+                        <TextView
+                            android:id="@+id/main_r5_txt_wendu"
+                            android:layout_width="0dip"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="0.0℃" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dip" >
+
+                        <ImageView
+                            android:id="@+id/img_r5_wet"
+                            android:layout_width="20dip"
+                            android:layout_height="20dip"
+                            android:src="@drawable/connect_red" />
+
+                        <TextView
+                            android:layout_width="0dip"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="湿度"
+                            android:textColor="@color/white_txt_bg"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            android:typeface="serif" />
+
+                        <TextView
+                            android:id="@+id/main_r5_txt_wet"
+                            android:layout_width="0dip"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="0.0%" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dip" >
+
+                        <ImageView
+                            android:id="@+id/img_r5_co2"
+                            android:layout_width="20dip"
+                            android:layout_height="20dip"
+                            android:src="@drawable/connect_red" />
+
+                        <TextView
+                            android:layout_width="0dip"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="二氧化碳"
+                            android:textColor="@color/white_txt_bg"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            android:typeface="serif" />
+
+                        <TextView
+                            android:id="@+id/main_r5_txt_co2"
+                            android:layout_width="0dip"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="0.0ppm" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/imageView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginTop="20dp"
+                    android:src="@drawable/room" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="0dip"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dip"
+                android:layout_weight="0.5"
+                android:background="@color/guodao_bg"
+                android:gravity="center"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/textView8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="过道"
+                    android:textColor="@color/white_txt_bg"
+                    android:textSize="34sp"
+                    android:textStyle="bold"
+                    android:typeface="serif" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginLeft="10dip"
+                    android:orientation="vertical" >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center" >
+
+                        <ImageView
+                            android:id="@+id/img_r6_ben"
+                            android:layout_width="20dip"
+                            android:layout_height="20dip"
+                            android:src="@drawable/connect_red" />
+
+                        <TextView
+                            android:layout_width="0dip"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="苯"
+                            android:textColor="@color/white_txt_bg"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            android:typeface="serif" />
+
+                        <TextView
+                            android:id="@+id/main_r6_txt_ben"
+                            android:layout_width="0dip"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="0.0ppm" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dip"
+                        android:gravity="center" >
+
+                        <ImageView
+                            android:id="@+id/img_r6_c2h"
+                            android:layout_width="20dip"
+                            android:layout_height="20dip"
+                            android:src="@drawable/connect_red" />
+
+                        <TextView
+                            android:layout_width="0dip"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="甲醛"
+                            android:textColor="@color/white_txt_bg"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            android:typeface="serif" />
+
+                        <TextView
+                            android:id="@+id/main_r6_txt_jiaquan"
+                            android:layout_width="0dip"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="0.0ppm" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dip"
+                        android:gravity="center" >
+
+                        <ImageView
+                            android:id="@+id/img_r6_anqi"
+                            android:layout_width="20dip"
+                            android:layout_height="20dip"
+                            android:src="@drawable/connect_red" />
+
+                        <TextView
+                            android:layout_width="0dip"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="氮气"
+                            android:textColor="@color/white_txt_bg"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            android:typeface="serif" />
+
+                        <TextView
+                            android:id="@+id/main_r6_txt_anqi"
+                            android:layout_width="0dip"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="0.0ppm" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dip"
+                        android:gravity="center" >
+
+                        <ImageView
+                            android:id="@+id/img_r6_voc"
+                            android:layout_width="20dip"
+                            android:layout_height="20dip"
+                            android:src="@drawable/connect_red" />
+
+                        <TextView
+                            android:layout_width="0dip"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="VOC"
+                            android:textColor="@color/white_txt_bg"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            android:typeface="serif" />
+
+                        <TextView
+                            android:id="@+id/main_r6_txt_voc"
+                            android:layout_width="0dip"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="0.0ppm" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dip"
+                android:layout_weight="1.04"
+                android:background="@color/chufang_bg" >
+
+                <ImageView
+                    android:id="@+id/imageView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginTop="20dp"
+                    android:src="@drawable/room" />
+
+                <TextView
+                    android:id="@+id/textView8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignRight="@+id/imageView2"
+                    android:layout_below="@+id/imageView2"
+                    android:layout_marginRight="61dp"
+                    android:text="厨房"
+                    android:textColor="@color/white_txt_bg"
+                    android:textSize="34sp"
+                    android:textStyle="bold"
+                    android:typeface="serif" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_toRightOf="@+id/imageView2"
+                    android:orientation="vertical" >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" >
+
+                        <ImageView
+                            android:id="@+id/img_r7_wendu"
+                            android:layout_width="20dip"
+                            android:layout_height="20dip"
+                            android:src="@drawable/connect_red" />
+
+                        <TextView
+                            android:layout_width="0dip"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="温度"
+                            android:textColor="@color/white_txt_bg"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            android:typeface="serif" />
+
+                        <TextView
+                            android:id="@+id/main_r7_txt_wet"
+                            android:layout_width="0dip"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="0.0℃" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginTop="20dip"
+                        android:layout_toRightOf="@+id/imageView2"
+                        android:orientation="vertical" >
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" >
+
+                            <ImageView
+                                android:id="@+id/img_r7_wet"
+                                android:layout_width="20dip"
+                                android:layout_height="20dip"
+                                android:src="@drawable/connect_red" />
+
+                            <TextView
+                                android:layout_width="0dip"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="湿度"
+                                android:textColor="@color/white_txt_bg"
+                                android:textSize="16sp"
+                                android:textStyle="bold"
+                                android:typeface="serif" />
+
+                            <TextView
+                                android:id="@+id/main_r7_txt_wet"
+                                android:layout_width="0dip"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="0.0%" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="20dip" >
+
+                            <ImageView
+                                android:id="@+id/img_r7_c2h"
+                                android:layout_width="20dip"
+                                android:layout_height="20dip"
+                                android:src="@drawable/connect_red" />
+
+                            <TextView
+                                android:layout_width="0dip"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="甲醛"
+                                android:textColor="@color/white_txt_bg"
+                                android:textSize="16sp"
+                                android:textStyle="bold"
+                                android:typeface="serif" />
+
+                            <TextView
+                                android:id="@+id/main_r7_txt_jiaquan"
+                                android:layout_width="0dip"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="0.0ppm" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="20dip" >
+
+                            <ImageView
+                                android:id="@+id/img_r7_co2"
+                                android:layout_width="20dip"
+                                android:layout_height="20dip"
+                                android:src="@drawable/connect_red" />
+
+                            <TextView
+                                android:layout_width="0dip"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="二氧化碳"
+                                android:textColor="@color/white_txt_bg"
+                                android:textSize="16sp"
+                                android:textStyle="bold"
+                                android:typeface="serif" />
+
+                            <TextView
+                                android:id="@+id/main_r7_txt_co2"
+                                android:layout_width="0dip"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="0.0ppm" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </RelativeLayout>
+        </LinearLayout>
+
+       <TextView
+            android:id="@+id/textView9"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/rights_bg"
+            android:gravity="center"
+            android:text="@string/rights"
+            android:textStyle="bold"
+            android:typeface="serif" />
+    </LinearLayout>
+
+</LinearLayout>
